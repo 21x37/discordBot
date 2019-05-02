@@ -1,0 +1,31 @@
+{
+  "name": "discord-bots",
+  "version": "1.0.0",
+  "description": "Easily setup discord bots with some customization!",
+  "main": "discordBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21x37/discordBot.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "chat",
+    "greeting",
+    "emotes",
+    "moderate",
+    "21x37"
+  ],
+  "author": "Tyler Mok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/21x37/discordBot/issues"
+  },
+  "homepage": "https://github.com/21x37/discordBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
