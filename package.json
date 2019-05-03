@@ -1,5 +1,5 @@
 {
-  "name": "discord-bots",
+  "name": "@21x37/discord-bot",
   "version": "1.0.0",
   "description": "Easily setup discord bots with some customization!",
   "main": "discordBot.js",

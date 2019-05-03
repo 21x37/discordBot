@@ -110,7 +110,7 @@ class discordBot {
         });
 
         this.client.on('guildMemberAdd', (member) => {
-            this.isGreeting.boolean ? this.greeting(member) : null;
+            this.isGreeting.active ? this.greeting(member) : null;
         });
     };
 };
