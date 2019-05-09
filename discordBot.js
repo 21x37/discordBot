@@ -10,14 +10,14 @@ class discordBot {
         this.emotes = options.emotes;
         this.webhookOptions = {};
     };
-    greeting(member) {
+    _greeting(member) {
         const channel = member.guild.channels.find((ch) => ch.name === this.isGreeting.channelName);
         if (!channel) return;
 
         channel.send(`${this.isGreeting.message} ${member}`);
 
     };
-    emoticons(message) {
+    _emoticons(message) {
         this.emotes.forEach((emote) => {
             console.log(message.content, emote.command);
             if (message.content === emote.command) {
@@ -27,7 +27,7 @@ class discordBot {
             };
         });
     };
-    moderate(message) {
+    _moderate(message) {
         // <------- Kicking a user logic
         if (message.content.startsWith('!kick')) {
             const user = message.mentions.users.first();
@@ -75,7 +75,7 @@ class discordBot {
         // ------->
         };
     };
-    async music(message) {
+    async _music(message) {
         if (message.content === '/join') {
             if (message.member.voiceChannel) {
                 message.member.voiceChannel.join()
@@ -104,13 +104,13 @@ class discordBot {
         console.log('Logged in!');
 
         this.client.on('message', (message) => {
-            this.isModerating ? this.moderate(message) : null;
-            this.songs ? this.music(message) : null;
-            this.emotes ? this.emoticons(message, this.emotes) : null;
+            this.isModerating ? this._moderate(message) : null;
+            this.songs ? this._music(message) : null;
+            this.emotes ? this._emoticons(message, this.emotes) : null;
         });
 
         this.client.on('guildMemberAdd', (member) => {
-            this.isGreeting.active ? this.greeting(member) : null;
+            this.isGreeting.active ? this._greeting(member) : null;
         });
     };
 };
