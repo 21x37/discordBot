@@ -37,7 +37,7 @@ In discord
 * Channel is the channel name of where you want the greeting to be.
 
 ```js
-const isGreeting = { boolean: true, message: 'Welcome!', 'general' };
+const isGreeting = { boolean: true, message: 'Welcome!', channelName: 'general' };
 ```
 ### Emotes is an ARRAY of objects where each object will have the command and a url to the image.
 
