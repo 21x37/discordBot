@@ -1,4 +1,7 @@
 # @21x37/discord-bot
+![npm](https://img.shields.io/npm/v/discord-bot.svg?style=popout)
+![license](https://img.shields.io/github/license/21x37/discordBot.svg?style=popout)
+
 Easily setup a discord bot with this npm module! 🕹️
 
 # Install
